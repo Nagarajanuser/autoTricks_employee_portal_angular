@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* Markdown styles for chatbot */
+.markdown-body {
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  h3 { font-size: 1.1rem; }
+  
+  strong {
+    font-weight: 600;
+  }
+
+  code {
+    background-color: rgba(0,0,0,0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+  }
+}
