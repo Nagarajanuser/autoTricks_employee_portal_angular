@@ -52,4 +52,13 @@ export class HrService {
   submitTimesheet(data: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/projects/timesheet`, data);
   }
+
+  // Profile Endpoints
+  getProfile(): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/profile/`);
+  }
+
+  updateProfile(profileData: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/profile/`, profileData);
+  }
 }

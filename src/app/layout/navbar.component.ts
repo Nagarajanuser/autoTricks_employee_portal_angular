@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { AuthService } from '../core/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -14,9 +15,9 @@ import { Component } from '@angular/core';
               <span>John Doe</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userMenu">
-              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-cog me-2"></i> Settings</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)"><i class="fa-solid fa-cog me-2"></i> Settings</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-sign-out-alt me-2"></i> Logout</a></li>
+              <li><a class="dropdown-item text-danger" href="javascript:void(0)" (click)="logout()"><i class="fa-solid fa-sign-out-alt me-2"></i> Logout</a></li>
             </ul>
           </div>
         </div>
@@ -24,4 +25,11 @@ import { Component } from '@angular/core';
     </nav>
   `
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  private authService = inject(AuthService);
+
+  logout() {
+    this.authService.logout();
+  }
+}
+

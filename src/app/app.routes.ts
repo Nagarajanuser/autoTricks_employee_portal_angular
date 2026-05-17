@@ -10,6 +10,7 @@ import { authGuard } from './core/guards/auth.guard';
 
 import { PayrollComponent } from './features/payroll/payroll.component';
 import { ProjectsComponent } from './features/projects/projects.component';
+import { PersonalInfoComponent } from './features/personal-info/personal-info.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -23,7 +24,7 @@ export const routes: Routes = [
       { path: 'chatbot', component: ChatbotComponent },
       { path: 'attendance', component: AttendanceComponent },
       { path: 'leave', component: LeaveComponent },
-      { path: 'personal-info', component: PlaceholderComponent, data: { title: 'Personal Information' } },
+      { path: 'personal-info', component: PersonalInfoComponent },
       { path: 'payroll', component: PayrollComponent },
       { path: 'projects', component: ProjectsComponent },
       { path: 'performance', component: PlaceholderComponent, data: { title: 'Performance' } },
